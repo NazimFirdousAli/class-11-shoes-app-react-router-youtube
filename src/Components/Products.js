@@ -17,16 +17,8 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
   root: {
     display:'flex',
-    flexDirection:'row',
-    justifyContent: 'flexStart',
-    // flexWrap:'wrap',
-    margin: '25px 0px 75px 100px',
-    alignItems:'center',
-    maxWidth:'30%',
-
-  },
-  media: {
-    height: 300,
+    flexWrap:'wrap',
+    margin:"35px 40px 0"
 
   },
 });
@@ -40,7 +32,7 @@ export default function Product() {
       {Object.keys(Shoes).map((Keyname) => {
         return (
           <div key={Keyname}>
-            <Card>
+            <Card style={{maxWidth:'400px', margin:"0 10px 20px"}}>
               <CardActionArea>
               <img src={Shoes[Keyname].img} height='300' width='400'></img>
                 <CardMedia>
@@ -49,9 +41,10 @@ export default function Product() {
                   <Typography gutterBottom variant="h5" component="h2">
                     {Shoes[Keyname].name}
                   </Typography>
-                </CardContent>
-                
+                </CardContent >
+                <div>
                 <img src={gen} height='55px' width='55px'></img>
+                </div>
               </CardActionArea>
               <CardActions>
               <Link key={Keyname} to={`/product/${Keyname}`}>

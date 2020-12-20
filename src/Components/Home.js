@@ -27,13 +27,14 @@ function Home (){
   const classes = useStyles();
 
     var settings = {
-        dots: true,
-        pauseOnHover: false,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoPlay: true,
-        speed:1000,
+      draggable: true,
+      autoplay: true, /* this is the new line */
+      autoplaySpeed: 2000,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      touchThreshold: 1000,
+      dots: true,
       };
       return (
         <div className={classes.root}>
